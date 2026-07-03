@@ -45,7 +45,6 @@
     .hero-actions { margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; }
     .photo-card { position:relative; margin:0; overflow:hidden; border-radius:36px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow); }
     .photo-card img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; image-rendering:auto; }
-    .photo-card figcaption { position:absolute; left:16px; right:16px; bottom:16px; padding:10px 12px; border-radius:16px; background:rgba(0,0,0,.52); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.12); color:rgba(255,255,255,.78); font-size:12px; line-height:1.45; }
     .trust-row { margin-top:26px; display:flex; gap:10px; flex-wrap:wrap; color:rgba(255,255,255,.72); font-size:13px; font-weight:700; }
     .pill { padding:10px 13px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); }
     section { padding:86px 0; }
@@ -79,7 +78,7 @@
     footer .wrap { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
     footer a { color:rgba(255,255,255,.78); }
     @media (max-width:900px) { .hero-inner,.split { grid-template-columns:1fr; } .grid-3 { grid-template-columns:1fr; } .nav-links a:not(.btn) { display:none; } }
-    @media (max-width:560px) { .nav-inner { min-height:64px; } .brand { letter-spacing:.1em; font-size:12px; } .hero-inner { padding-top:44px; } section { padding:62px 0; } .btn { width:100%; } .hero-actions { width:100%; } .quote { padding:28px; } .cta-box { padding:28px; border-radius:30px; } .photo-card figcaption { position:static; border-radius:0; } }
+    @media (max-width:560px) { .nav-inner { min-height:64px; } .brand { letter-spacing:.1em; font-size:12px; } .hero-inner { padding-top:44px; } section { padding:62px 0; } .btn { width:100%; } .hero-actions { width:100%; } .quote { padding:28px; } .cta-box { padding:28px; border-radius:30px; } }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Polecenia Tesla - 1000 km darmowego ładowania Supercharger","url":"https://tesla.gigaportal.pl/polecenia-tesli/","description":"Przewodnik dla kupujących Teslę: zamów nowe auto z linku polecającego i odbierz 1000 km darmowego ładowania Supercharger.","inLanguage":"pl-PL"}</script>
 </head>
@@ -107,7 +106,7 @@
           <div class="hero-actions"><a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku i odbierz 1000 km</a><a class="btn btn-secondary" href="#co-dalej">Zobacz, co dalej zrobić</a></div>
           <div class="trust-row" aria-label="Najważniejsze informacje"><span class="pill">1000 km Supercharger</span><span class="pill">Dla kupującego nowe auto</span><span class="pill">Link przed zamówieniem</span></div>
         </div>
-        <figure class="photo-card"><img src="./assets/moj-tesla-model-y.svg" alt="Prywatne zdjęcie Tesli Model Y" loading="eager" decoding="async"><figcaption>Zdjęcie prywatne.</figcaption></figure>
+        <figure class="photo-card"><img src="/img/tesla-model-y-polecenie.svg" alt="Prywatne zdjęcie Tesli Model Y" loading="eager" decoding="async"></figure>
       </div>
     </section>
 
@@ -124,7 +123,7 @@
 
     <section id="co-dalej">
       <div class="wrap split">
-        <figure class="photo-card"><img src="./assets/moj-tesla-model-y.svg" alt="Prywatne zdjęcie Tesli Model Y" loading="lazy" decoding="async"><figcaption>Zdjęcie prywatne.</figcaption></figure>
+        <figure class="photo-card"><img src="/img/tesla-model-y-polecenie.svg" alt="Prywatne zdjęcie Tesli Model Y" loading="lazy" decoding="async"></figure>
         <div>
           <p class="kicker">Co masz dalej zrobić?</p><h2>3 proste kroki, żeby odebrać 1000 km Supercharger</h2>
           <div class="steps" aria-label="Kroki skorzystania z polecenia Tesla">
@@ -163,6 +162,6 @@
     <section class="cta" aria-labelledby="cta-title"><div class="wrap"><div class="cta-box"><div><p class="kicker">Gotowy do konfiguracji?</p><h2 id="cta-title">Kliknij link, zamów Teslę i odbierz 1000 km Supercharger</h2><p>Jeśli planujesz kupić Teslę, zacznij od linku polecającego. To daje kupującemu 1000 km darmowego ładowania na stacjach Supercharger.</p><a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku</a></div></div></div></section>
   </main>
 
-  <footer><div class="wrap"><span>© Polecenia Tesla. Strona prywatna, nieoficjalna.</span><span>Zdjęcie prywatne. <a href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Link polecający</a>.</span></div></footer>
+  <footer><div class="wrap"><span>© Polecenia Tesla. Strona prywatna, nieoficjalna.</span><span><a href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Link polecający</a>.</span></div></footer>
 </body>
 </html>
