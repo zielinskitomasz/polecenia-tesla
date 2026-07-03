@@ -42,9 +42,8 @@
     .benefit-box strong { display:block; color:#fff; font-size:clamp(24px,3.5vw,40px); line-height:1.05; letter-spacing:-.045em; margin-bottom:8px; }
     .benefit-box span { color:var(--muted); font-size:16px; line-height:1.6; }
     .hero-actions { margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; }
-    .photo-card { position:relative; min-height:420px; margin:0; overflow:hidden; border-radius:36px; background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.04)),radial-gradient(circle at 55% 38%,rgba(255,255,255,.22),transparent 34%),#090a0f; border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow); }
-    .photo-card::before { content:""; position:absolute; left:9%; right:9%; bottom:29%; height:18%; border-radius:999px 999px 30px 30px; background:linear-gradient(180deg,rgba(255,255,255,.36),rgba(255,255,255,.09)); border:1px solid rgba(255,255,255,.30); }
-    .photo-card::after { content:""; position:absolute; left:13%; right:13%; bottom:25%; height:3px; border-radius:999px; background:rgba(255,255,255,.72); box-shadow:0 0 28px rgba(255,255,255,.7); }
+    .photo-card { position:relative; margin:0; overflow:hidden; border-radius:36px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow); }
+    .photo-card img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; }
     .trust-row { margin-top:26px; display:flex; gap:10px; flex-wrap:wrap; color:rgba(255,255,255,.72); font-size:13px; font-weight:700; }
     .pill { padding:10px 13px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); }
     section { padding:86px 0; }
@@ -105,7 +104,7 @@
           <div class="hero-actions"><a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku i odbierz 1000 km</a><a class="btn btn-secondary" href="#co-dalej">Zobacz, co dalej zrobić</a></div>
           <div class="trust-row" aria-label="Najważniejsze informacje"><span class="pill">1000 km Supercharger</span><span class="pill">Dla kupującego nowe auto</span><span class="pill">Link przed zamówieniem</span></div>
         </div>
-        <div class="photo-card" aria-label="Minimalistyczna grafika samochodu elektrycznego"></div>
+        <figure class="photo-card"><img src="/img/tesla-model-y-polecenie.svg" alt="Prywatne zdjęcie Tesli Model Y" loading="eager" decoding="async"></figure>
       </div>
     </section>
 
@@ -122,7 +121,7 @@
 
     <section id="co-dalej">
       <div class="wrap split">
-        <div class="photo-card" aria-label="Minimalistyczna grafika samochodu elektrycznego"></div>
+        <figure class="photo-card"><img src="/img/tesla-model-y-polecenie.svg" alt="Prywatne zdjęcie Tesli Model Y" loading="lazy" decoding="async"></figure>
         <div>
           <p class="kicker">Co masz dalej zrobić?</p><h2>3 proste kroki, żeby odebrać 1000 km Supercharger</h2>
           <div class="steps" aria-label="Kroki skorzystania z polecenia Tesla">
