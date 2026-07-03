@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Polecenia Tesla - link polecający Tesla | tesla.gigaportal.pl</title>
-  <meta name="description" content="Polecenia Tesla dla osób planujących zakup Tesli. Sprawdź, jak skorzystać z linku polecającego Tesla Tomasza i przejść do oficjalnej strony zakupu Tesla.">
+  <meta name="description" content="Polecenia Tesla dla osób planujących zakup Tesli. Sprawdź, jak skorzystać z linku polecającego Tesla i przejść do oficjalnej strony zakupu Tesla.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://tesla.gigaportal.pl/polecenia-tesli/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Polecenia Tesla - link polecający Tesla">
-  <meta property="og:description" content="Ładnie opisany przewodnik dla kupujących Teslę: jak działa link polecający Tesla i gdzie kliknąć przed zakupem.">
+  <meta property="og:description" content="Przewodnik dla kupujących Teslę: jak działa link polecający Tesla i gdzie kliknąć przed zakupem.">
   <meta property="og:url" content="https://tesla.gigaportal.pl/polecenia-tesli/">
   <meta name="theme-color" content="#0b0b0f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +18,11 @@
   <style>
     :root {
       --bg: #050507;
-      --bg-soft: #101116;
       --text: #f8f8f8;
       --muted: #b9bbc3;
       --line: rgba(255,255,255,.14);
       --card: rgba(255,255,255,.065);
-      --card-strong: rgba(255,255,255,.105);
       --accent: #ffffff;
-      --accent-dark: #0d0d10;
       --radius: 28px;
       --shadow: 0 30px 90px rgba(0,0,0,.48);
       --max: 1180px;
@@ -35,7 +32,7 @@
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at 50% 0%, #22242f 0%, #050507 44%, #020203 100%);
+      background: radial-gradient(circle at 50% 0%, #242632 0%, #050507 44%, #020203 100%);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -57,7 +54,7 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(20px);
-      background: rgba(5,5,7,.72);
+      background: rgba(5,5,7,.74);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
     .nav-inner {
@@ -174,7 +171,7 @@
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.12);
     }
-    .hero-visual {
+    .hero-visual, .visual-card {
       position: relative;
       min-height: 460px;
       border-radius: 36px;
@@ -183,7 +180,7 @@
       border: 1px solid rgba(255,255,255,.14);
       box-shadow: var(--shadow);
     }
-    .hero-visual svg { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
+    .hero-visual svg, .visual-card svg { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
     .caption {
       position: absolute;
       left: 18px;
@@ -246,16 +243,6 @@
       gap: 34px;
       align-items: center;
     }
-    .visual-card {
-      min-height: 420px;
-      border-radius: 34px;
-      overflow: hidden;
-      position: relative;
-      border: 1px solid rgba(255,255,255,.14);
-      background: #0b0c10;
-      box-shadow: var(--shadow);
-    }
-    .visual-card svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
     .steps { counter-reset: step; display: grid; gap: 14px; }
     .step {
       counter-increment: step;
@@ -280,7 +267,15 @@
       font-weight: 900;
     }
     .step p { margin: 0; }
-    .feature-copy p:first-of-type { margin-top: 0; }
+    .text-block { max-width: 880px; }
+    .text-block p { margin: 18px 0; }
+    .inline-link {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+      font-weight: 800;
+    }
     .quote {
       padding: 42px;
       border-radius: 36px;
@@ -296,16 +291,6 @@
       margin: 0;
       font-weight: 800;
     }
-    .text-block {
-      max-width: 880px;
-    }
-    .text-block p { margin: 18px 0; }
-    .inline-link {
-      color: #fff;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      font-weight: 800;
-    }
     .faq { display: grid; gap: 14px; max-width: 920px; }
     details {
       border: 1px solid rgba(255,255,255,.12);
@@ -313,12 +298,7 @@
       padding: 20px 22px;
       background: rgba(255,255,255,.055);
     }
-    summary {
-      cursor: pointer;
-      font-weight: 900;
-      font-size: 18px;
-      color: #fff;
-    }
+    summary { cursor: pointer; font-weight: 900; font-size: 18px; color: #fff; }
     details p { margin-bottom: 0; }
     .cta {
       padding: 92px 0 104px;
@@ -333,9 +313,7 @@
       padding: 46px;
       border-radius: 42px;
       border: 1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(circle at 50% 0%, rgba(255,255,255,.18), transparent 38%),
-        rgba(255,255,255,.055);
+      background: radial-gradient(circle at 50% 0%, rgba(255,255,255,.18), transparent 38%), rgba(255,255,255,.055);
       box-shadow: var(--shadow);
     }
     .cta-box h2 { max-width: 780px; margin: 0 auto; }
@@ -400,7 +378,7 @@
         <a href="#jak-to-dziala">Jak to działa</a>
         <a href="#dlaczego">Dlaczego warto</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Link polecający</a>
+        <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku</a>
       </nav>
     </div>
   </header>
@@ -413,11 +391,11 @@
           <h1 id="hero-title">Polecenia Tesla dla kupujących nową Teslę</h1>
           <p class="lead">Planujesz zamówić Teslę? Zanim przejdziesz do konfiguratora, skorzystaj z mojego linku polecającego Tesla. To najprostszy sposób, żeby wejść do oficjalnego procesu zakupu z przypisanym poleceniem.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku: ts.la/tomasz827959</a>
+            <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku</a>
             <a class="btn btn-secondary" href="#jak-to-dziala">Zobacz, jak to działa</a>
           </div>
           <div class="trust-row" aria-label="Najważniejsze informacje">
-            <span class="pill">Oficjalny link Tesla</span>
+            <span class="pill">Oficjalne przejście do Tesla</span>
             <span class="pill">Przed zakupem auta</span>
             <span class="pill">Aktualne warunki sprawdzisz po kliknięciu</span>
           </div>
@@ -461,7 +439,7 @@
           <h2>Polecenie Tesla najlepiej kliknąć przed rozpoczęciem zamówienia</h2>
         </div>
         <div class="steps" aria-label="Kroki skorzystania z polecenia Tesla">
-          <div class="step"><p><strong>Kliknij link polecający Tesla:</strong> <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>. Link przeniesie Cię do oficjalnego procesu Tesla.</p></div>
+          <div class="step"><p><strong>Kliknij link polecający Tesla:</strong> <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">kliknij tutaj</a>. Link przeniesie Cię do oficjalnego procesu Tesla.</p></div>
           <div class="step"><p><strong>Sprawdź aktualne warunki programu.</strong> Zasady poleceń Tesla mogą się zmieniać, dlatego przed finalizacją zamówienia zobacz, co aktualnie pokazuje Tesla po przejściu z linku.</p></div>
           <div class="step"><p><strong>Skonfiguruj samochód.</strong> Wybierz model, kolor, koła, wnętrze, dodatki i sposób odbioru dokładnie tak, jak planujesz.</p></div>
           <div class="step"><p><strong>Dokończ zamówienie w oficjalnym systemie Tesla.</strong> Ta strona tylko kieruje do linku polecającego; zakup odbywa się po stronie Tesla.</p></div>
@@ -489,7 +467,7 @@
           <article class="card">
             <div class="icon">3</div>
             <h3>Pomagasz osobie polecającej</h3>
-            <p>Korzystając z linku <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">ts.la/tomasz827959</a>, przypisujesz zakup do mojego polecenia. Dla Ciebie to tylko jeden klik przed zamówieniem.</p>
+            <p>Korzystając z <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">linku polecającego</a>, przypisujesz zakup do mojego polecenia. Dla Ciebie to tylko jeden klik przed zamówieniem.</p>
           </article>
         </div>
       </div>
@@ -501,15 +479,9 @@
           <svg role="img" aria-labelledby="svg-title-2 svg-desc-2" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
             <title id="svg-title-2">Grafika ładowania samochodu elektrycznego</title>
             <desc id="svg-desc-2">Autorska ilustracja przedstawiająca kabel ładowania i minimalistyczny samochód elektryczny.</desc>
-            <defs>
-              <linearGradient id="charge" x1="0" x2="1">
-                <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity=".04"/>
-              </linearGradient>
-            </defs>
             <rect width="900" height="700" fill="#07080c"/>
             <circle cx="710" cy="200" r="230" fill="#fff" fill-opacity=".07"/>
-            <rect x="90" y="120" width="210" height="430" rx="34" fill="url(#charge)" stroke="#fff" stroke-opacity=".18"/>
+            <rect x="90" y="120" width="210" height="430" rx="34" fill="#fff" fill-opacity=".08" stroke="#fff" stroke-opacity=".18"/>
             <rect x="150" y="180" width="90" height="190" rx="20" fill="#fff" fill-opacity=".12"/>
             <path d="M195 213 L165 284 H203 L176 343 L239 259 H201 L225 213Z" fill="#fff" fill-opacity=".88"/>
             <path d="M300 360 C430 285 602 300 730 397" fill="none" stroke="#fff" stroke-opacity=".58" stroke-width="16" stroke-linecap="round"/>
@@ -520,12 +492,12 @@
           </svg>
           <figcaption class="caption">Źródło grafiki: autorska ilustracja SVG/AI przygotowana dla tej strony.</figcaption>
         </figure>
-        <div class="feature-copy text-block">
+        <div class="text-block">
           <p class="kicker">Przed zakupem</p>
           <h2>Najważniejsze: link polecający Tesla musi być użyty we właściwym momencie</h2>
-          <p>Najczęstszy błąd przy poleceniach Tesla jest bardzo prosty: ktoś przypomina sobie o linku dopiero po złożeniu zamówienia. Dlatego jeśli jesteś jeszcze przed zakupem, najlepiej zacząć od razu od linku polecającego. Mój link to <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>.</p>
+          <p>Najczęstszy błąd przy poleceniach Tesla jest bardzo prosty: ktoś przypomina sobie o linku dopiero po złożeniu zamówienia. Dlatego jeśli jesteś jeszcze przed zakupem, najlepiej zacząć od razu od linku polecającego. Możesz to zrobić, wybierając <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">kliknij tutaj</a>.</p>
           <p>Po kliknięciu przejdziesz do oficjalnej ścieżki Tesla. Tam sprawdzisz aktualny model, cenę, wariant napędu, wyposażenie, możliwy termin odbioru i aktualne warunki programu poleceń. Ta strona nie zastępuje informacji Tesla; ma tylko pomóc Ci nie pominąć etapu polecenia.</p>
-          <p>Jeśli porównujesz różne modele, możesz wrócić do linku później, ale najbezpieczniej zapisać go sobie i użyć przed finalnym rozpoczęciem zamówienia. Dzięki temu łatwiej uniknąć sytuacji, w której zakup został zrobiony normalnie, ale bez przypisanego polecenia Tesla.</p>
+          <p>Jeśli porównujesz różne modele, możesz wrócić do linku później, ale najbezpieczniej zapisać tę stronę i użyć przycisku <strong>Skorzystaj z linku</strong> przed finalnym rozpoczęciem zamówienia.</p>
         </div>
       </div>
     </section>
@@ -533,7 +505,7 @@
     <section>
       <div class="wrap">
         <div class="quote">
-          <p>Jeżeli decyzja o zakupie Tesli jest już blisko, kliknij link polecający przed konfiguracją: <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">ts.la/tomasz827959</a>.</p>
+          <p>Jeżeli decyzja o zakupie Tesli jest już blisko, przejdź do konfiguratora przez <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">link polecający</a>.</p>
         </div>
       </div>
     </section>
@@ -544,9 +516,9 @@
           <p class="kicker">Polecenia Tesla SEO</p>
           <h2>Polecenia Tesla: co powinien wiedzieć kupujący?</h2>
           <p>Hasło <strong>polecenia Tesla</strong> najczęściej pojawia się wtedy, gdy ktoś jest już po jazdach próbnych, obejrzał konfigurator i zaczyna realnie myśleć o zamówieniu samochodu. To dobry moment, żeby spokojnie sprawdzić link polecający Tesla, bo sam proces zakupu jest szybki i łatwo przejść przez niego automatycznie, zapominając o dodatkowym kroku.</p>
-          <p>Link polecający Tesla działa jako wejście do oficjalnego ekosystemu Tesla. Nie jest kodem rabatowym wpisywanym ręcznie w przypadkowym polu. To po prostu specjalny adres, od którego zaczynasz konfigurację lub przejście do oferty. W moim przypadku jest to <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>.</p>
+          <p>Link polecający Tesla działa jako wejście do oficjalnego ekosystemu Tesla. Nie jest kodem rabatowym wpisywanym ręcznie w przypadkowym polu. To po prostu specjalny adres, od którego zaczynasz konfigurację lub przejście do oferty. Wystarczy użyć widocznego na tej stronie przycisku <strong>Skorzystaj z linku</strong>.</p>
           <p>Dla kupującego najważniejsza jest prostota: klikasz link, sprawdzasz aktualne warunki, a następnie wybierasz samochód tak jak zwykle. Zasady programu mogą zależeć od kraju, daty, modelu, dostępności i aktualnej polityki Tesla, dlatego nie warto opierać się na starych opisach z forów. Najpewniejsze informacje zobaczysz zawsze po przejściu przez aktualny link i w oficjalnym panelu Tesla.</p>
-          <p>Jeżeli dopiero zastanawiasz się nad zakupem, ta strona może służyć jako zakładka do zapisania na później. Gdy będziesz gotowy, wróć tutaj i użyj przycisku z linkiem polecającym. Jeżeli jesteś już zdecydowany, możesz przejść bezpośrednio: <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">otwórz mój link polecający Tesla</a>.</p>
+          <p>Jeżeli dopiero zastanawiasz się nad zakupem, ta strona może służyć jako zakładka do zapisania na później. Gdy będziesz gotowy, wróć tutaj i użyj przycisku z linkiem polecającym. Jeżeli jesteś już zdecydowany, możesz od razu <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">kliknąć tutaj</a>.</p>
         </div>
         <figure class="visual-card" aria-label="Wizualizacja minimalistycznego wnętrza auta elektrycznego">
           <svg role="img" aria-labelledby="svg-title-3 svg-desc-3" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
@@ -576,7 +548,7 @@
         <div class="faq">
           <details>
             <summary>Gdzie jest link polecający Tesla?</summary>
-            <p>Mój link polecający Tesla to <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>. Najlepiej kliknąć go przed rozpoczęciem zamówienia samochodu.</p>
+            <p>Link polecający Tesla jest ukryty pod przyciskami i podkreślonymi odnośnikami na tej stronie. Najprościej wybrać <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">kliknij tutaj</a> albo przycisk <strong>Skorzystaj z linku</strong>.</p>
           </details>
           <details>
             <summary>Czy to jest oficjalna strona Tesla?</summary>
@@ -601,7 +573,7 @@
             <p class="kicker">Gotowy do konfiguracji?</p>
             <h2 id="cta-title">Przejdź do Tesla przez mój link polecający</h2>
             <p>Jeśli planujesz kupić Teslę, zacznij od linku polecającego. Kliknij poniżej, sprawdź aktualne warunki programu i kontynuuj na oficjalnej stronie Tesla.</p>
-            <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Otwórz https://ts.la/tomasz827959</a>
+            <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku</a>
           </div>
         </div>
       </div>
@@ -611,7 +583,7 @@
   <footer>
     <div class="wrap">
       <span>© Polecenia Tesla. Strona prywatna, nieoficjalna.</span>
-      <span>Grafiki: autorskie ilustracje SVG/AI wygenerowane dla tej strony. Link: <a href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">ts.la/tomasz827959</a></span>
+      <span>Grafiki: autorskie ilustracje SVG/AI wygenerowane dla tej strony. <a href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Link polecający</a>.</span>
     </div>
   </footer>
 </body>
