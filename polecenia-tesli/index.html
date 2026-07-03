@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polecenia Tesla - link polecający Tesla | tesla.gigaportal.pl</title>
+  <meta name="description" content="Polecenia Tesla dla osób planujących zakup Tesli. Sprawdź, jak skorzystać z linku polecającego Tesla Tomasza i przejść do oficjalnej strony zakupu Tesla.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://tesla.gigaportal.pl/polecenia-tesli/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Polecenia Tesla - link polecający Tesla">
+  <meta property="og:description" content="Ładnie opisany przewodnik dla kupujących Teslę: jak działa link polecający Tesla i gdzie kliknąć przed zakupem.">
+  <meta property="og:url" content="https://tesla.gigaportal.pl/polecenia-tesli/">
+  <meta name="theme-color" content="#0b0b0f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050507;
+      --bg-soft: #101116;
+      --text: #f8f8f8;
+      --muted: #b9bbc3;
+      --line: rgba(255,255,255,.14);
+      --card: rgba(255,255,255,.065);
+      --card-strong: rgba(255,255,255,.105);
+      --accent: #ffffff;
+      --accent-dark: #0d0d10;
+      --radius: 28px;
+      --shadow: 0 30px 90px rgba(0,0,0,.48);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 50% 0%, #22242f 0%, #050507 44%, #020203 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      background: #fff;
+      color: #000;
+      padding: 10px 14px;
+      border-radius: 999px;
+      z-index: 999;
+    }
+    .skip-link:focus { left: 12px; }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(20px);
+      background: rgba(5,5,7,.72);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: #fff; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #050507; }
+    .btn-secondary { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.18); }
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(5,5,7,.2), rgba(5,5,7,.96)),
+        radial-gradient(circle at 52% 36%, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(115deg, rgba(255,255,255,.08), transparent 40%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 76px 0 62px;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 46px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; box-shadow: 0 0 22px rgba(255,255,255,.8); }
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(44px, 7.2vw, 92px);
+      line-height: .92;
+      letter-spacing: -.075em;
+      font-weight: 900;
+    }
+    .lead {
+      margin: 24px 0 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.55;
+    }
+    .hero-actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .trust-row {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .pill {
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .hero-visual {
+      position: relative;
+      min-height: 460px;
+      border-radius: 36px;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: var(--shadow);
+    }
+    .hero-visual svg { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
+    .caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.78);
+      font-size: 12px;
+      backdrop-filter: blur(16px);
+    }
+    section { padding: 86px 0; }
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .section-head { max-width: 800px; margin-bottom: 34px; }
+    .kicker {
+      margin: 0 0 12px;
+      color: rgba(255,255,255,.64);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 900;
+      font-size: 12px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.5vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+    h3 {
+      margin: 0 0 12px;
+      font-size: clamp(22px, 2.2vw, 31px);
+      letter-spacing: -.035em;
+      line-height: 1.13;
+    }
+    p { color: var(--muted); line-height: 1.78; font-size: 17px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.22);
+    }
+    .card strong { color: #fff; }
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.11);
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 34px;
+      align-items: center;
+    }
+    .visual-card {
+      min-height: 420px;
+      border-radius: 34px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #0b0c10;
+      box-shadow: var(--shadow);
+    }
+    .visual-card svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .steps { counter-reset: step; display: grid; gap: 14px; }
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .step::before {
+      content: counter(step);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      color: #050507;
+      font-weight: 900;
+    }
+    .step p { margin: 0; }
+    .feature-copy p:first-of-type { margin-top: 0; }
+    .quote {
+      padding: 42px;
+      border-radius: 36px;
+      background: linear-gradient(140deg, rgba(255,255,255,.14), rgba(255,255,255,.045));
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: var(--shadow);
+    }
+    .quote p {
+      color: #fff;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -.035em;
+      margin: 0;
+      font-weight: 800;
+    }
+    .text-block {
+      max-width: 880px;
+    }
+    .text-block p { margin: 18px 0; }
+    .inline-link {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 800;
+    }
+    .faq { display: grid; gap: 14px; max-width: 920px; }
+    details {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 24px;
+      padding: 20px 22px;
+      background: rgba(255,255,255,.055);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 18px;
+      color: #fff;
+    }
+    details p { margin-bottom: 0; }
+    .cta {
+      padding: 92px 0 104px;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.09));
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .cta-box {
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 46px;
+      border-radius: 42px;
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,.18), transparent 38%),
+        rgba(255,255,255,.055);
+      box-shadow: var(--shadow);
+    }
+    .cta-box h2 { max-width: 780px; margin: 0 auto; }
+    .cta-box p { max-width: 760px; margin: 22px auto 30px; }
+    footer {
+      padding: 38px 0;
+      color: rgba(255,255,255,.55);
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: 13px;
+    }
+    footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    footer a { color: rgba(255,255,255,.78); }
+    @media (max-width: 900px) {
+      .hero-inner, .split { grid-template-columns: 1fr; }
+      .hero-visual, .visual-card { min-height: 360px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .nav-links a:not(.btn) { display: none; }
+    }
+    @media (max-width: 560px) {
+      .nav-inner { min-height: 64px; }
+      .brand { letter-spacing: .1em; font-size: 12px; }
+      .hero-inner { padding-top: 44px; }
+      section { padding: 62px 0; }
+      .btn { width: 100%; }
+      .hero-actions { width: 100%; }
+      .quote { padding: 28px; }
+      .cta-box { padding: 28px; border-radius: 30px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Polecenia Tesla - link polecający Tesla",
+    "url": "https://tesla.gigaportal.pl/polecenia-tesli/",
+    "description": "Przewodnik dla kupujących Teslę: jak skorzystać z linku polecającego Tesla.",
+    "inLanguage": "pl-PL",
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jak skorzystać z polecenia Tesla?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Najprościej kliknąć link polecający Tesla przed rozpoczęciem zamówienia i kontynuować zakup na oficjalnej stronie Tesla." }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy link polecający Tesla działa przy każdym modelu?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Zasady programu mogą się zmieniać, dlatego aktualne warunki należy zawsze sprawdzić po kliknięciu linku polecającego na oficjalnej stronie Tesla." }
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Przejdź do treści</a>
+  <header class="nav" aria-label="Główna nawigacja">
+    <div class="nav-inner">
+      <a class="brand" href="https://tesla.gigaportal.pl/polecenia-tesli/">Polecenia Tesla</a>
+      <nav class="nav-links" aria-label="Sekcje strony">
+        <a href="#jak-to-dziala">Jak to działa</a>
+        <a href="#dlaczego">Dlaczego warto</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Link polecający</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Link polecający Tesla</div>
+          <h1 id="hero-title">Polecenia Tesla dla kupujących nową Teslę</h1>
+          <p class="lead">Planujesz zamówić Teslę? Zanim przejdziesz do konfiguratora, skorzystaj z mojego linku polecającego Tesla. To najprostszy sposób, żeby wejść do oficjalnego procesu zakupu z przypisanym poleceniem.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Skorzystaj z linku: ts.la/tomasz827959</a>
+            <a class="btn btn-secondary" href="#jak-to-dziala">Zobacz, jak to działa</a>
+          </div>
+          <div class="trust-row" aria-label="Najważniejsze informacje">
+            <span class="pill">Oficjalny link Tesla</span>
+            <span class="pill">Przed zakupem auta</span>
+            <span class="pill">Aktualne warunki sprawdzisz po kliknięciu</span>
+          </div>
+        </div>
+
+        <figure class="hero-visual" aria-label="Wizualizacja elektrycznego samochodu na ciemnym tle">
+          <svg role="img" aria-labelledby="svg-title-1 svg-desc-1" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
+            <title id="svg-title-1">Minimalistyczna grafika samochodu elektrycznego</title>
+            <desc id="svg-desc-1">Autorska grafika SVG wygenerowana dla strony o poleceniach Tesla.</desc>
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".34"/>
+                <stop offset=".5" stop-color="#7c8799" stop-opacity=".08"/>
+                <stop offset="1" stop-color="#000000" stop-opacity=".95"/>
+              </linearGradient>
+              <radialGradient id="glow" cx="50%" cy="42%" r="45%">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".28"/>
+                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="900" height="700" fill="#08090d"/>
+            <circle cx="455" cy="280" r="330" fill="url(#glow)"/>
+            <path d="M80 535 C250 480 660 480 820 535" stroke="#fff" stroke-opacity=".12" stroke-width="2" fill="none"/>
+            <path d="M168 443 C230 354 330 308 468 304 C602 300 704 349 762 443 C702 466 240 466 168 443Z" fill="url(#g1)" stroke="#fff" stroke-opacity=".34"/>
+            <path d="M273 396 C330 350 395 333 487 333 C573 333 637 354 687 396" fill="none" stroke="#fff" stroke-opacity=".58" stroke-width="5" stroke-linecap="round"/>
+            <path d="M205 445 C290 468 642 468 728 445" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="298" cy="460" r="44" fill="#08090d" stroke="#fff" stroke-opacity=".42" stroke-width="10"/>
+            <circle cx="637" cy="460" r="44" fill="#08090d" stroke="#fff" stroke-opacity=".42" stroke-width="10"/>
+            <path d="M150 493 H785" stroke="#fff" stroke-opacity=".18" stroke-width="2"/>
+            <path d="M365 238 L480 102 L444 246 H545 L420 425 L461 255 H365Z" fill="#fff" fill-opacity=".9"/>
+          </svg>
+          <figcaption class="caption">Źródło grafiki: autorska ilustracja SVG/AI przygotowana dla tej strony, bez użycia zewnętrznych zdjęć.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="jak-to-dziala">
+      <div class="wrap split">
+        <div class="section-head">
+          <p class="kicker">Jak to działa</p>
+          <h2>Polecenie Tesla najlepiej kliknąć przed rozpoczęciem zamówienia</h2>
+        </div>
+        <div class="steps" aria-label="Kroki skorzystania z polecenia Tesla">
+          <div class="step"><p><strong>Kliknij link polecający Tesla:</strong> <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>. Link przeniesie Cię do oficjalnego procesu Tesla.</p></div>
+          <div class="step"><p><strong>Sprawdź aktualne warunki programu.</strong> Zasady poleceń Tesla mogą się zmieniać, dlatego przed finalizacją zamówienia zobacz, co aktualnie pokazuje Tesla po przejściu z linku.</p></div>
+          <div class="step"><p><strong>Skonfiguruj samochód.</strong> Wybierz model, kolor, koła, wnętrze, dodatki i sposób odbioru dokładnie tak, jak planujesz.</p></div>
+          <div class="step"><p><strong>Dokończ zamówienie w oficjalnym systemie Tesla.</strong> Ta strona tylko kieruje do linku polecającego; zakup odbywa się po stronie Tesla.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dlaczego">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Dlaczego warto</p>
+          <h2>Jeśli i tak kupujesz Teslę, polecenie Tesla to mały krok, którego szkoda pominąć</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">1</div>
+            <h3>Nie zmieniasz auta ani konfiguracji</h3>
+            <p>Link polecający Tesla nie wymaga wybierania innego modelu ani dodatków. Po prostu zaczynasz zakup od polecenia, a potem przechodzisz przez normalny konfigurator Tesla.</p>
+          </article>
+          <article class="card">
+            <div class="icon">2</div>
+            <h3>Widzisz oficjalne warunki</h3>
+            <p>Program poleceń Tesla potrafi się zmieniać. Dlatego najważniejsze jest kliknięcie linku i sprawdzenie aktualnych informacji bezpośrednio w procesie Tesla.</p>
+          </article>
+          <article class="card">
+            <div class="icon">3</div>
+            <h3>Pomagasz osobie polecającej</h3>
+            <p>Korzystając z linku <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">ts.la/tomasz827959</a>, przypisujesz zakup do mojego polecenia. Dla Ciebie to tylko jeden klik przed zamówieniem.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <figure class="visual-card" aria-label="Wizualizacja ładowania samochodu elektrycznego">
+          <svg role="img" aria-labelledby="svg-title-2 svg-desc-2" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
+            <title id="svg-title-2">Grafika ładowania samochodu elektrycznego</title>
+            <desc id="svg-desc-2">Autorska ilustracja przedstawiająca kabel ładowania i minimalistyczny samochód elektryczny.</desc>
+            <defs>
+              <linearGradient id="charge" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+                <stop offset="1" stop-color="#ffffff" stop-opacity=".04"/>
+              </linearGradient>
+            </defs>
+            <rect width="900" height="700" fill="#07080c"/>
+            <circle cx="710" cy="200" r="230" fill="#fff" fill-opacity=".07"/>
+            <rect x="90" y="120" width="210" height="430" rx="34" fill="url(#charge)" stroke="#fff" stroke-opacity=".18"/>
+            <rect x="150" y="180" width="90" height="190" rx="20" fill="#fff" fill-opacity=".12"/>
+            <path d="M195 213 L165 284 H203 L176 343 L239 259 H201 L225 213Z" fill="#fff" fill-opacity=".88"/>
+            <path d="M300 360 C430 285 602 300 730 397" fill="none" stroke="#fff" stroke-opacity=".58" stroke-width="16" stroke-linecap="round"/>
+            <path d="M430 438 C490 363 612 347 728 430 C672 452 486 456 430 438Z" fill="#fff" fill-opacity=".18" stroke="#fff" stroke-opacity=".35"/>
+            <path d="M463 437 C512 455 658 455 704 437" stroke="#fff" stroke-opacity=".85" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="502" cy="454" r="29" fill="#07080c" stroke="#fff" stroke-opacity=".36" stroke-width="8"/>
+            <circle cx="663" cy="454" r="29" fill="#07080c" stroke="#fff" stroke-opacity=".36" stroke-width="8"/>
+          </svg>
+          <figcaption class="caption">Źródło grafiki: autorska ilustracja SVG/AI przygotowana dla tej strony.</figcaption>
+        </figure>
+        <div class="feature-copy text-block">
+          <p class="kicker">Przed zakupem</p>
+          <h2>Najważniejsze: link polecający Tesla musi być użyty we właściwym momencie</h2>
+          <p>Najczęstszy błąd przy poleceniach Tesla jest bardzo prosty: ktoś przypomina sobie o linku dopiero po złożeniu zamówienia. Dlatego jeśli jesteś jeszcze przed zakupem, najlepiej zacząć od razu od linku polecającego. Mój link to <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>.</p>
+          <p>Po kliknięciu przejdziesz do oficjalnej ścieżki Tesla. Tam sprawdzisz aktualny model, cenę, wariant napędu, wyposażenie, możliwy termin odbioru i aktualne warunki programu poleceń. Ta strona nie zastępuje informacji Tesla; ma tylko pomóc Ci nie pominąć etapu polecenia.</p>
+          <p>Jeśli porównujesz różne modele, możesz wrócić do linku później, ale najbezpieczniej zapisać go sobie i użyć przed finalnym rozpoczęciem zamówienia. Dzięki temu łatwiej uniknąć sytuacji, w której zakup został zrobiony normalnie, ale bez przypisanego polecenia Tesla.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="quote">
+          <p>Jeżeli decyzja o zakupie Tesli jest już blisko, kliknij link polecający przed konfiguracją: <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">ts.la/tomasz827959</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div class="text-block">
+          <p class="kicker">Polecenia Tesla SEO</p>
+          <h2>Polecenia Tesla: co powinien wiedzieć kupujący?</h2>
+          <p>Hasło <strong>polecenia Tesla</strong> najczęściej pojawia się wtedy, gdy ktoś jest już po jazdach próbnych, obejrzał konfigurator i zaczyna realnie myśleć o zamówieniu samochodu. To dobry moment, żeby spokojnie sprawdzić link polecający Tesla, bo sam proces zakupu jest szybki i łatwo przejść przez niego automatycznie, zapominając o dodatkowym kroku.</p>
+          <p>Link polecający Tesla działa jako wejście do oficjalnego ekosystemu Tesla. Nie jest kodem rabatowym wpisywanym ręcznie w przypadkowym polu. To po prostu specjalny adres, od którego zaczynasz konfigurację lub przejście do oferty. W moim przypadku jest to <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>.</p>
+          <p>Dla kupującego najważniejsza jest prostota: klikasz link, sprawdzasz aktualne warunki, a następnie wybierasz samochód tak jak zwykle. Zasady programu mogą zależeć od kraju, daty, modelu, dostępności i aktualnej polityki Tesla, dlatego nie warto opierać się na starych opisach z forów. Najpewniejsze informacje zobaczysz zawsze po przejściu przez aktualny link i w oficjalnym panelu Tesla.</p>
+          <p>Jeżeli dopiero zastanawiasz się nad zakupem, ta strona może służyć jako zakładka do zapisania na później. Gdy będziesz gotowy, wróć tutaj i użyj przycisku z linkiem polecającym. Jeżeli jesteś już zdecydowany, możesz przejść bezpośrednio: <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">otwórz mój link polecający Tesla</a>.</p>
+        </div>
+        <figure class="visual-card" aria-label="Wizualizacja minimalistycznego wnętrza auta elektrycznego">
+          <svg role="img" aria-labelledby="svg-title-3 svg-desc-3" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
+            <title id="svg-title-3">Minimalistyczne wnętrze samochodu elektrycznego</title>
+            <desc id="svg-desc-3">Autorska ilustracja kokpitu inspirowanego nowoczesnym autem elektrycznym.</desc>
+            <rect width="900" height="700" fill="#08090d"/>
+            <circle cx="450" cy="250" r="310" fill="#fff" fill-opacity=".06"/>
+            <path d="M120 392 C270 325 610 325 780 392 L720 560 H180 Z" fill="#fff" fill-opacity=".09" stroke="#fff" stroke-opacity=".2"/>
+            <rect x="340" y="262" width="230" height="142" rx="18" fill="#11131a" stroke="#fff" stroke-opacity=".32"/>
+            <rect x="361" y="283" width="188" height="100" rx="12" fill="#fff" fill-opacity=".16"/>
+            <path d="M235 438 C275 404 340 404 380 438" stroke="#fff" stroke-opacity=".6" stroke-width="10" stroke-linecap="round" fill="none"/>
+            <path d="M196 560 C290 510 602 510 704 560" stroke="#fff" stroke-opacity=".15" stroke-width="3" fill="none"/>
+            <path d="M414 315 H500" stroke="#fff" stroke-opacity=".7" stroke-width="6" stroke-linecap="round"/>
+            <path d="M414 346 H520" stroke="#fff" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <figcaption class="caption">Źródło grafiki: autorska ilustracja SVG/AI przygotowana dla tej strony.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">FAQ</p>
+          <h2>Najczęstsze pytania o polecenia Tesla</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Gdzie jest link polecający Tesla?</summary>
+            <p>Mój link polecający Tesla to <a class="inline-link" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">https://ts.la/tomasz827959</a>. Najlepiej kliknąć go przed rozpoczęciem zamówienia samochodu.</p>
+          </details>
+          <details>
+            <summary>Czy to jest oficjalna strona Tesla?</summary>
+            <p>Nie. To prywatna strona informacyjna z linkiem polecającym. Sam zakup, konfiguracja auta, płatność, dostępność i warunki programu odbywają się po stronie Tesla.</p>
+          </details>
+          <details>
+            <summary>Czy zasady programu poleceń Tesla mogą się zmienić?</summary>
+            <p>Tak. Zasady, korzyści i dostępność programu poleceń Tesla mogą się zmieniać. Dlatego zawsze sprawdź aktualne informacje po kliknięciu linku i przed finalizacją zamówienia.</p>
+          </details>
+          <details>
+            <summary>Czy mogę najpierw tylko sprawdzić ofertę?</summary>
+            <p>Tak. Możesz kliknąć link, zobaczyć oficjalną stronę Tesla, porównać modele i wrócić do decyzji później. Ważne, żeby przy finalnym zamówieniu pamiętać o linku polecającym.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-box">
+          <div>
+            <p class="kicker">Gotowy do konfiguracji?</p>
+            <h2 id="cta-title">Przejdź do Tesla przez mój link polecający</h2>
+            <p>Jeśli planujesz kupić Teslę, zacznij od linku polecającego. Kliknij poniżej, sprawdź aktualne warunki programu i kontynuuj na oficjalnej stronie Tesla.</p>
+            <a class="btn btn-primary" href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">Otwórz https://ts.la/tomasz827959</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© Polecenia Tesla. Strona prywatna, nieoficjalna.</span>
+      <span>Grafiki: autorskie ilustracje SVG/AI wygenerowane dla tej strony. Link: <a href="https://ts.la/tomasz827959" target="_blank" rel="sponsored noopener noreferrer">ts.la/tomasz827959</a></span>
+    </div>
+  </footer>
+</body>
+</html>
